@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    position: relative;
+    border: solid black;
+    height: 500px;
+    margin-inline: auto;
+}
+
+#ballon {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+}
+
+#epine {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: 0%;
+    right: 0;
+    animation: move 3s infinite linear;
+}
+
+.isJumping{
+    animation: jump 1s linear infinite;
+}
+
+#collision{
+    left: 75px;
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 20vh;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes move {
+    0%{
+        right: 0%;
+    }
+    100%{
+        right: calc(100% - 2vw);
+    }
+}
+
